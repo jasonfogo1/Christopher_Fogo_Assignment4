@@ -2,7 +2,7 @@ const AccountPage = require('../pageobjects/account.page');
 const LoginPage = require('../pageobjects/login.page');
 const MyOrderPage = require('../pageobjects/myOrder.page');
 
-describe("Verify Order", ()=> {
+describe.skip("Verify Order", ()=> {
     it('Should Verify an Order', async ()=> {
         await LoginPage.open();
         let username="priyeuheceba-9338@yopmail.com";
