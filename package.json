@@ -4,7 +4,12 @@
   "description": "Assignment 4",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run wdio.conf.js"
+    "test": "npx wdio run wdio.conf.js",
+    "SignUp":"npx wdio run wdio.conf.js --spec ./test/signUpTest.e2e.js",
+    "AddToCart":"npx wdio run wdio.conf.js --spec ./test/addToCart.e2e.js",
+    "CheckOut":"npx wdio run wdio.conf.js --spec ./test/checkout.e2e.js",
+    "VerifyOrder":"npx wdio run wdio.conf.js --spec ./test/verifyOrders.e2e.js"
+
   },
   "repository": {
     "type": "git",

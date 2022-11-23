@@ -4,22 +4,24 @@
 * that is shared across all page objects
 */
 module.exports = class Page {
-    get welcomeMsg(){
+    get welcomeMsg() {
         return $('div[class="panel header"] span[class="logged-in"]');
     }
-    get btnMenu(){
+    get btnMenu() {
         return $('(//button[@type="button"])[1]');
     }
-    get btnMyAccount(){
+    get btnMyAccount() {
         return $('(//a[contains(text(),"My Account")])[1]');
     }
+    get btnSignout() {
+        return $('(//a[normalize-space()="Sign Out"])[1]');
+    }
 
-    
     /**
     * Opens a sub page of the page
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
-    open (path) {
+    open(path) {
         return browser.url(`https://magento.softwaretestingboard.com/${path}`)
     }
 }

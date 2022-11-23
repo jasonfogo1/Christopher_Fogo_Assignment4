@@ -1,11 +1,13 @@
 
 class PaymentPage {
-    get pageTitle(){
+    get pageTitle() {
         return $("div[class='payment-group'] div[class='step-title']")
     }
-    get btnPlaceOrder(){
-        return $('button[title="Place Order"]')
+    get btnPlaceOrder() {
+        return $('.checkout > span:nth-child(1)')
     }
-
+    get obstructionImg() {
+        return $('div[class="loading-mask"]');
+    }
 }
 module.exports = new PaymentPage();

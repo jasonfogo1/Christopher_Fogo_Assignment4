@@ -9,34 +9,29 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputEmail () {
+    get inputEmail() {
         return $('#email');
     }
-
-    get inputPassword () {
+    get inputPassword() {
         return $('input[name="login[password]"]');
     }
-
-    get btnLogin () {
+    get btnLogin() {
         return $('button[class="action login primary"]');
     }
-
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async login (username, password) {
+    async login(username, password) {
         await this.inputEmail.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnLogin.click();
     }
-
     /**
      * overwrite specific options to adapt it to page object
      */
-    open () {
+    open() {
         return super.open('customer/account/login');
     }
 }
-
 module.exports = new LoginPage();
